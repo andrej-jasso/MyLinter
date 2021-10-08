@@ -28,7 +28,8 @@ let package = Package(
             name: "LintBridge",
             dependencies:
             [
-                .product(name: "ArgumentParser", package: "swift-argument-parser")
+                .product(name: "ArgumentParser", package: "swift-argument-parser"),
+                .product(name: "swiftlint", package: "SwiftLint")
             ]
         )
     ]
