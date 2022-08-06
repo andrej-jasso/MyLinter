@@ -8,7 +8,7 @@ let package = Package(
     products: [
         .library(
             name: "LintBridgeProduct",
-            targets: ["LintBridge"]
+            targets: ["LintBridgeExecutable"]
         )
     ],
     dependencies: [
@@ -18,7 +18,7 @@ let package = Package(
     ],
     targets: [
         .executableTarget(
-            name: "LintBridge",
+            name: "LintBridgeExecutable",
             dependencies:
             [
                 .product(name: "ArgumentParser", package: "swift-argument-parser")

@@ -24,8 +24,12 @@ extension Command {
     func run() throws {
         let url = URL(string: pathToRepo)!
         let fileManager = FileManager()
-        let contents = try fileManager.contentsOfDirectory(at: url, includingPropertiesForKeys: [.creationDateKey], options: [.includesDirectoriesPostOrder])
-      print(contents)
+        if #available(macOS 10.15, *) {
+            let contents = try fileManager.contentsOfDirectory(at: url, includingPropertiesForKeys: [.creationDateKey], options: [.includesDirectoriesPostOrder])
+            print(contents)
+        } else {
+            // Fallback on earlier versions
+        }
     }
 
   }
