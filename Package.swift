@@ -6,11 +6,11 @@ import PackageDescription
 let package = Package(
     name: "LintBridge",
     platforms: [
-        .iOS(.v13)
+        .macOS("13.4")
     ],
     products: [
         .library(
-            name: "LintBridge",
+            name: "LintBridgeProduct",
             targets: ["LintBridge"]
         ),
     ],
