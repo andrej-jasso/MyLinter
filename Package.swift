@@ -5,9 +5,6 @@ import PackageDescription
 
 let package = Package(
     name: "LintBridge",
-    platforms: [
-        .macOS("12.3")
-    ],
     products: [
         .library(
             name: "LintBridgeProduct",
